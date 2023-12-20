@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Title$</title>
+</head>
+<body>
+<h1>상세</h1>
+<ul>
+    <li th:text="${dto.no}"></li>
+    <li th:text="${dto.name}"></li>
+    <li th:text="${dto.price}"></li>
+    <li th:text="${dto.stock}"></li>
+</ul>
+<a th:href="@{/update(no=${dto.no})}">수정</a>
+</body>
+</html>

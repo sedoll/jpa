@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Title$</title>
+</head>
+<body>
+<ul>
+    <th:block th:each="dto : ${dtoList}">
+        <li>
+            <a th:href="@{/detail(no=${dto.no})}" th:text="${dto.no} + '' + ${dto.name} + ' 상세'"></a>
+            <a th:href="@{/delete(no=${dto.no})}">삭제</a>
+        </li>
+    </th:block>
+</ul>
+<a th:href="@{/insert}">생성</a>
+</body>
+</html>

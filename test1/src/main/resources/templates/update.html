@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Title$</title>
+</head>
+<body>
+<h1>수정</h1>
+<form th:action="@{/update}" method="post">
+    <input type="hidden" name="no" id="no" th:value="${dto.no}">
+    <input type="text" name="name" id="name" placeholder="name" th:value="${dto.name}" required>
+    <input type="text" name="price" id="price" placeholder="price" th:value="${dto.price}" required>
+    <input type="text" name="stock" id="stock" placeholder="stock" th:value="${dto.stock}" required>
+    <input type="submit" value="수정">
+</form>
+</body>
+</html>
